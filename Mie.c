@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<cmath.h>
+#include<math.h>
 
 
-double M_of_Lam(double lambda, double N_sphere, double N_med);
+double M_of_Lam(double x, double y, double N_med);
 int main() {
 
   double m, x, lam, N_sphere, N_med;
@@ -25,14 +25,14 @@ int main() {
 return 0;
 }
 
-double M_of_Lam(double lambda, double N_sphere, double N_med) {
+double M_of_Lam(double x, double y, double N_med) {
   double m;
   // m is just defined as the refrative index of the sphere divided by the 
   // refractive index of the surrounding medium.  We will assume
   // the refractive index of each does not change with wavelength, so 
   // the result will be the same regardless of the value of lambda
 
-  m = N_sphere / N_med;
+  m = y / N_med;
   return m;
 
 }
